@@ -124,3 +124,66 @@ img{
     text-align:center;
     box-shadow: 2px 2px 3px #999;  
 }
+
+.contact-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: calc(100% - 1in);
+}
+
+.contact-section-container{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    width: 80%;
+    border: 2px solid lightgrey;
+    border-radius: 5rem;
+    box-shadow: 2rem 2rem 1rem lightgrey;
+    align-items: center;
+}
+
+.contact-section-container > * {
+    justify-self: center;
+}
+
+.contact-cars{
+    grid-column: 1 / 3;
+    width: 50%;
+}
+
+.contact-cars::after{
+    content: '';
+    position: absolute;
+    background-color: lightgrey;
+    z-index: 1;
+    inline-size: 70%;
+    height: 2px;
+    left: 15%;
+    bottom: 50%;
+}
+
+.contact-person::after{
+    content: '';
+    position: absolute;
+    background-color: black;
+    z-index: 1;
+    inline-size: 70%;
+    height: 35%;
+    width: 4px;
+    left: 50%;
+    bottom: calc(0.5in + 5rem);
+}
+
+.contact-image{
+    width: 100%;
+    height: 100%;
+    padding: 5rem;
+}
+
+.contact-details{
+    color: dodgerblue;
+    font-size: 1.5rem;
+    text-align: center;
+}
