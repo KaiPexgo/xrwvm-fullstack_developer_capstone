@@ -100,6 +100,7 @@ def get_dealerships(request, state="All"):
 # Create a `get_dealer_reviews` view to render the reviews of a dealer
 def get_dealer_reviews(request, dealer_id):
     # if dealer id has been provided
+    # print(dealer_id)
     if(dealer_id):
         endpoint = "/fetchReviews/dealer/"+str(dealer_id)
         reviews = get_request(endpoint)
@@ -124,6 +125,7 @@ def get_dealer_details(request, dealer_id):
 def add_review(request):
     if(request.user.is_anonymous == False):
         data = json.loads(request.body)
+        
         try:
             response = post_review(data)
             return JsonResponse({"status":200})
