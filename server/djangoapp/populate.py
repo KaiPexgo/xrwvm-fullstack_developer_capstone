@@ -9,7 +9,7 @@ def initiate():
         },
         {
             "name": "Mercedes",
-            "description":"Great cars. German technology"
+            "description": "Great cars. German technology"
         },
         {
             "name": "Audi",
